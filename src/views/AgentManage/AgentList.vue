@@ -30,7 +30,7 @@
                 <el-table-column label="总商家数" align="center" prop="subs"></el-table-column>
                 <el-table-column label="代理资料状态" align="center" prop="status">
                     <template slot-scope="scope">
-                        <span v-if="scope.row.status==1" >待审核，<span class="look cur-po" @click="agentHandle(scope.row,1,'')">请查看</span></span>
+                        <span v-if="scope.row.status==1" >待审核，<span class="look cur-po" @click="agentHandle(scope.row,1,'')">请审核</span></span>
                         <span v-else-if="scope.row.status==2">审核通过，<span class="look cur-po" @click="agentHandle(scope.row,2,'')">请查看</span></span>
                         <span v-else-if="scope.row.status==3">审核拒绝，<span class="look cur-po" @click="agentHandle(scope.row,3),''">请查看</span></span>
                         <span v-else>未提交</span>
@@ -38,7 +38,7 @@
                 </el-table-column>
                 <el-table-column label="代理入驻状态" align="center" prop="instatus">
                     <template slot-scope="scope">
-                        <span v-if="scope.row.instatus==1" >待审核，<span class="look cur-po" @click="agentHandle(scope.row,1,'income')">请查看</span></span>
+                        <span v-if="scope.row.instatus==1" >待审核，<span class="look cur-po" @click="agentHandle(scope.row,1,'income')">请审核</span></span>
                         <span v-else-if="scope.row.instatus==2">已入驻</span>
                         <span v-else-if="scope.row.instatus==3">拒绝</span>
                         <span v-else>未入驻</span>
